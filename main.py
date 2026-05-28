@@ -5,9 +5,11 @@ def main():
     print("The game is started")
 
     num = random.randint(1,99)
+    score = 10
     while True:     
         users_number = input("Guess the number: ")
         if users_number == 'exit':
+            
             break
         elif users_number== 'is the number even':
             if num % 2 ==0 :
@@ -16,10 +18,12 @@ def main():
                 print("the number is odd ")
         elif num == users_number:
             print("You won")
+            print(f'Your score {score}')
         else: 
             print("You lose")
-
+        score -= 1
         
+
     
 
     # TODO: Features 
